@@ -1,0 +1,13 @@
+*
+
+!.gitignore
+!*.json
+!*.yaml
+!*.config.js
+!*LICENSE
+
+!src
+!src/**/*
+
+!dist
+!dist/**/*

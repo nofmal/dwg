@@ -1,0 +1,28 @@
+@mixin icon($url_path) {
+  background-image: $url_path, url('./icons/1x1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+body {
+  display: flex;
+}
+
+i {
+  font-style: normal;
+
+  &.angle-right { @include icon(url('./icons/angle-right.svg')) }
+  &.copy { @include icon(url('./icons/copy.svg')) }
+  &.dice { @include icon(url('./icons/dice.svg')) }
+  &.eye { @include icon(url('./icons/eye.svg')) }
+  &.eye-slash { @include icon(url('./icons/eye-slash.svg')) }
+  &.globe { @include icon(url('./icons/globe.svg')) }
+  &.key { @include icon(url('./icons/key.svg')) }
+  &.user { @include icon(url('./icons/user.svg')) }
+
+  &[class] {
+    width: 1rem;
+    height: 1rem;
+  }
+}

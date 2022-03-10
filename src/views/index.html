@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dwg: Diceware Generator</title>
+</head>
+<body>
+  <main>
+    <div id="generator" class="no-display">
+      <div id="generator-title">
+        <i class="dice"></i>
+        <span>dwg: Diceware Generator</span>
+      </div>
+      <progress id="generator-progress" max="100" value="0">.</progress>
+      <form id="generator-window">
+        <div class="input-with-icon">
+          <i class="globe"></i>
+          <input id="site" placeholder="Site (e.g. www.example.com)">
+        </div>
+        <div class="input-with-icon">
+          <i class="user"></i>
+          <input id="name" placeholder="Name (e.g. John Doe)">
+        </div>
+        <div class="input-with-2-buttons">
+          <div class="input-with-icon">
+            <i class="key"></i>
+            <input id="password" type="password" placeholder="Password">
+          </div>
+          <button type="button" id="show-password">
+            <i class="eye"></i>
+          </button>
+        </div>
+        <div id="options">
+          <div class="options-s">
+            <span>Length</span>
+            <input id="length" type="number" min="6" max="10" value="8">
+          </div>
+          <div class="options-s">
+            <span>Counter</span>
+            <input id="counter" type="number" min="1" max="255" value="1">
+          </div>
+        </div>
+        <button type="button" id="generate-button">
+          <span>Generate diceware</span>
+          <i class="angle-right"></i>
+        </button>
+        <div id="error-popup" class="no-display">
+          <strong>error:</strong>
+          <i id="error-message"></i>
+        </div>
+        <div id="result-popup" class="no-display">
+          <span>Your generated diceware is:</span>
+          <div class="input-with-3-buttons">
+            <button type="button" id="copy-to-clipboard" title="Copy to Clipboard">
+              <i class="copy"></i>
+            </button>
+            <input id="result" type="password" readonly>
+            <button type="button" id="show-diceware">
+              <i class="eye"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+  <article>
+    <div id="side-view">
+      <h1>Diceware Generator/Manager</h1>
+      <p>
+        Stop wasting your time synchronizing your encrypted vault. Remember one
+        master password to access your passwords, anywhere, anytime, from any
+        device. No sync needed.
+      </p>
+    </div>
+  </article>
+</body>
+</html>
